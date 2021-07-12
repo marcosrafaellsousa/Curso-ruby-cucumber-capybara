@@ -6,6 +6,6 @@ Capybara.configure do |config|
     #selenium   selenuim_chrome    selenuim_chrome_headless
     
     config.default_driver = :selenium_chrome
-    config.app_host = 'https://www.google.com.br'
+    config.app_host = 'https://getbootstrap.com'
     config.default_max_wait_time = 5
 end
