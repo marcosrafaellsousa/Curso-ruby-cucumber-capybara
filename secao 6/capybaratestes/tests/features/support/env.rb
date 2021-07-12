@@ -1,5 +1,6 @@
 require 'capybara/cucumber'
 require 'selenium-webdriver'
+require 'webdrivers'
 
 Capybara.configure do |config|
     # Capybara disponibiliza 3 drivers
