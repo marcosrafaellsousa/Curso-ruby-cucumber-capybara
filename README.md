@@ -17,3 +17,7 @@ O projeto de testes utiliza as tecnologias:
 
 Abrir alguma das pastas '/tests', no terminal executar o comando `bundle install` para instalar as gems necessárias e executar os testes com o comando `cucumber`, os resultados devem aparecer no terminal.
 * Pode ser que alguns dos projetos das primeiras seções não tenha todas as gemas necessárias para rodar o projeto isoladamente por causa do webdriver chrome ter sido instalado localmente ao invés de no projeto.
+
+### Tags
+
+A partir da seção os testes estão tageados para facilitar a execução de testes separadamente
