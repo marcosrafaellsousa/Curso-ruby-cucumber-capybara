@@ -21,3 +21,7 @@ Abrir alguma das pastas '/tests', no terminal executar o comando `bundle install
 ### Tags
 
 A partir da seção os testes estão tageados para facilitar a execução de testes separadamente
+
+### Exemplos usados
+
+Os testes são executados em exemplos encontrados na internet de elementos que estão sendo usados, como por exemplo demonstrações de formulários de páginas do bootstrap, caso alguma dessas páginas saia do ar isso pode alterar o resultado de um teste.
