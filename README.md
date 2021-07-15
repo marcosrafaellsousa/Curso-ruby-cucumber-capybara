@@ -20,7 +20,7 @@ Abrir alguma das pastas '/tests', no terminal executar o comando `bundle install
 
 ### Tags
 
-A partir da seção os testes estão tageados para facilitar a execução de testes separadamente
+A partir da seção 6 os testes estão tageados para facilitar a execução de testes separadamente
 
 ### Exemplos usados
 
