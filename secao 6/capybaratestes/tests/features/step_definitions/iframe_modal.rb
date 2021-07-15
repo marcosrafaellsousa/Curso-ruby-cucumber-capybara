@@ -20,6 +20,5 @@ Quando ('eu entro no modal e verifico o texto') do
     within(@modal) do
         have_text("Woohoo, you're reading this text in a modal!")
         find_button('Close').hover.click
-        sleep(5)
     end
 end
