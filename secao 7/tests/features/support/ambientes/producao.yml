@@ -1,0 +1,2 @@
+# As variaveis tem que ter o mesmo nome em produção e homologacao
+url_padrao: 'https://getbootstrap.com'
