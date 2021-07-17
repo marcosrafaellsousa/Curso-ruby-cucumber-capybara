@@ -2,7 +2,7 @@
 
 # -p homolog faz com que quando o comando cucumber seja rodado, ele carregue o arquivo homolog.yml
 
-default: --profile progress -p homolog -p firefox
+default: --profile progress -p homolog -p chrome_headless
 pretty: --format pretty --publish-quiet
 progress: --format progress --publish-quiet
 
@@ -10,5 +10,6 @@ homolog: AMBIENTE=homolog
 producao: AMBIENTE=producao
 
 chrome: BROWSER=chrome
+chrome_headless: BROWSER=chrome_headless
 firefox: BROWSER=firefox
-ie: BROWSER=ie
+firefox_headless: BROWSER=firefox_headless

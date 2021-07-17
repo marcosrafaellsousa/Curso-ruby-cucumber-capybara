@@ -16,11 +16,23 @@ CONFIG = YAML.load_file(File.dirname(__FILE__) + "/ambientes/#{AMBIENTE}.yml")
 Capybara.register_driver :selenium do |app|
 
     if BROWSER.eql?('chrome')
-        Capybara::Selenium::Driver.new(app, :browser => :chrome,)
+        Capybara::Selenium::Driver.new(app, :browser => :chrome)
+    
     elsif BROWSER.eql?('firefox')
-        Capybara::Selenium::Driver.new(app, :browser => :firefox, :marionette =>TRUE)
-    elsif BROWSER.eql?('ie')
-        Capybara::Selenium::Driver.new(app, :browser => :internet_explorer)
+        Capybara::Selenium::Driver.new(app, :browser => :firefox, :marionette =>true)
+    
+    elsif BROWSER.eql?('chrome_headless')
+        Capybara::Selenium::Driver.new(app, :browser => :chrome,
+        # Utilizando as opções de "capabilities": https://chromedriver.chromium.org/capabilities
+        # Headless é bem utilizado em maquinas virtuais, containers etc.
+        desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(
+        "goog:chromeOptions" => {'args' =>['--headless', 'disable-gpu']}
+        )
+        )
+    
+    elsif BROWSER.eql?('firefox_headless')
+        browser_options = Selenium::WebDriver::Firefox::Options.new(args: ['--headless'])
+        Capybara::Selenium::Driver.new(app, :browser => :firefox, options: browser_options)
     end
 end
 
