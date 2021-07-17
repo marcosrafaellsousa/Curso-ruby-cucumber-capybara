@@ -3,8 +3,11 @@ require 'selenium-webdriver'
 require 'webdrivers'
 require 'site_prism'
 require_relative 'page_helper.rb'
+require_relative 'Helper.rb'
 
 World(PageObjects)
+# Fazendo o módulo Helper global
+World(Helper)
 
 BROWSER = ENV['BROWSER']
 AMBIENTE = ENV['AMBIENTE']
