@@ -1,17 +1,20 @@
 require 'capybara/cucumber'
 require 'selenium-webdriver'
 require 'site_prism'
+require 'webdrivers'
 require_relative 'helper.rb'
-
-World(Helper)
+require_relative 'page_helper.rb'
 
 AMBIENTE = ENV['AMBIENTE']
 
-CONFIG = YAMAL.load_file(File.dirname(__FILE__) + "ambientes/#{AMBIENTE}.yml")
+CONFIG = YAML.load_file(File.dirname(__FILE__) + "/ambientes/#{AMBIENTE}.yml")
+
+World(Helper)
+World(Pages)
 
 Capybara.configure do |config|
 
     config.default_driver = :selenium_chrome
-    config.app_host = CONFIG['url_padrao']
+    config.app_host = CONFIG["url_padrao"]
     config.default_max_wait_time = 10
 end
